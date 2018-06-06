@@ -107,6 +107,18 @@ public class FuzzyRule {
 		return outputs[out];
 	}
 
+	public String operToString() {
+
+		String r = "";
+		if (oper == OpAND)
+			r = "AND";
+		else
+			r = "OR";
+
+		return r;
+
+	}
+
 	public String toString() {
 		String result = new String( "Rule: [ ");
 		for (int i=0;i<inputs.length;i++)

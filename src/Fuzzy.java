@@ -82,7 +82,7 @@ public class Fuzzy extends MaxObject {
 			String localfile = this.getParentPatcher().getPath() + "/" + filename;
 
 			if (localfile.equals(MaxSystem.locateFile(filename))) {
-				fuzzy = new FuzzySystem();
+				fuzzy = new FuzzySystem(localfile);
 				fileChooser = new JFileChooser();
 				fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
 				update();
@@ -128,7 +128,7 @@ public class Fuzzy extends MaxObject {
 		for(int i=0; i<ins.length; i++) {
 			String ss = "double input between "+fuzzy.getInMinRange(i)+" and "+fuzzy.getInMaxRange(i);
 			inletAssist[i] = ss;
-			System.out.println(ss);
+			//System.out.println(ss);
 
 		}
 
@@ -837,7 +837,7 @@ public class Fuzzy extends MaxObject {
 	}
 
 	public void showRules() {
-		System.out.println(fuzzy.rulesToString());
+		System.out.println(fuzzy.rulesToText());
 	}
 
 }

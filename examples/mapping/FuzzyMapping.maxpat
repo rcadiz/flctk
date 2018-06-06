@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1095.0, 733.0 ],
+		"rect" : [ 138.0, 79.0, 1095.0, 733.0 ],
 		"bgcolor" : [ 0.900537, 0.724439, 0.391741, 1.0 ],
 		"editing_bgcolor" : [ 0.900537, 0.724439, 0.391741, 1.0 ],
 		"bglocked" : 0,
@@ -137,7 +137,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 182.0, 581.0, 518.0, 22.0 ],
 					"style" : "",
-					"text" : "pack 0. 0. 0. 0."
+					"text" : "pak 0. 0. 0. 0."
 				}
 
 			}
@@ -221,7 +221,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 34.0, 86.0, 1291.0, 682.0 ],
+						"rect" : [ 1001.0, 99.0, 1291.0, 682.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -249,6 +249,20 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"linecount" : 4,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 282.0, 44.0, 50.0, 62.0 ],
+									"style" : "",
+									"text" : "/fuzzyOutputs 0.5 0.5 ??? ???"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-10",
 									"maxclass" : "newobj",
@@ -977,9 +991,20 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-11", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"order" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"order" : 1,
 									"source" : [ "obj-7", 0 ]
 								}
 

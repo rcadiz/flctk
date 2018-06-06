@@ -1060,4 +1060,65 @@ public class FuzzySystem {
 			return outputs[i].getRangeMax();
 		}
 
+
+		public String rulesToText() {
+
+			String ss = "";
+			for (int i=0;i<nrules;i++) {
+
+				FuzzyRule r = rules[i];
+
+				ss += "IF ";
+				for(int j=0;j<ninputs;j++) {
+
+          int nr = r.getInputs()[j];
+					if (nr > 0) {
+						ss += inputs[j].getName() + " IS ";
+						ss += inputs[j].getMFLabelAt(nr - 1);
+						if(j < (ninputs - 1)) {
+							ss += " " + r.operToString() + " ";
+						}
+					}
+					else if (nr == 0) {
+						ss += inputs[j].getName() + " IS anything";
+					}
+					else {
+						ss += inputs[j].getName() + " IS NOT ";
+						ss += inputs[j].getMFLabelAt(nr - 1);
+						if(j < (ninputs - 1)) {
+							ss += " " + r.operToString() + " ";
+						}
+					}
+				}
+
+				ss += " THEN ";
+
+				for(int j=0;j<noutputs;j++) {
+
+          int nr = r.getOutputs()[j];
+					if (nr > 0) {
+						ss += outputs[j].getName() + " IS ";
+						ss += outputs[j].getMFLabelAt(nr - 1);
+						if(j < (noutputs - 1)) {
+							ss += " " + r.operToString() + " ";
+						}
+					}
+					else if (nr == 0) {
+						ss += outputs[j].getName() + " IS anything";
+					}
+					else {
+						ss += outputs[j].getName() + " IS NOT ";
+						ss += outputs[j].getMFLabelAt(nr - 1);
+						if(j < (noutputs - 1)) {
+							ss += " " + r.operToString() + " ";
+						}
+					}
+
+				}
+				ss += "\n";
+			}
+		return ss;
+
+		}
+
 	}
