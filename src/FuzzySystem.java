@@ -1075,19 +1075,16 @@ public class FuzzySystem {
 					if (nr > 0) {
 						ss += inputs[j].getName() + " IS ";
 						ss += inputs[j].getMFLabelAt(nr - 1);
-						if(j < (ninputs - 1)) {
-							ss += " " + r.operToString() + " ";
-						}
 					}
 					else if (nr == 0) {
-						ss += inputs[j].getName() + " IS anything";
+						ss += inputs[j].getName() + " IS anything ";
 					}
 					else {
 						ss += inputs[j].getName() + " IS NOT ";
 						ss += inputs[j].getMFLabelAt(nr - 1);
-						if(j < (ninputs - 1)) {
-							ss += " " + r.operToString() + " ";
-						}
+					}
+					if(j < (ninputs - 1)) {
+						ss += " " + r.operToString() + " ";
 					}
 				}
 
@@ -1099,20 +1096,18 @@ public class FuzzySystem {
 					if (nr > 0) {
 						ss += outputs[j].getName() + " IS ";
 						ss += outputs[j].getMFLabelAt(nr - 1);
-						if(j < (noutputs - 1)) {
-							ss += " " + r.operToString() + " ";
-						}
 					}
 					else if (nr == 0) {
-						ss += outputs[j].getName() + " IS anything";
+						ss += outputs[j].getName() + " IS anything ";
 					}
 					else {
 						ss += outputs[j].getName() + " IS NOT ";
 						ss += outputs[j].getMFLabelAt(nr - 1);
+					}
 						if(j < (noutputs - 1)) {
 							ss += " " + r.operToString() + " ";
 						}
-					}
+
 
 				}
 				ss += "\n";
