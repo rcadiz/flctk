@@ -79,7 +79,14 @@ public class Fuzzy extends MaxObject {
 
 		if (MaxSystem.locateFile(filename) != null) {
 
+
 			String localfile = this.getParentPatcher().getPath() + "/" + filename;
+
+			if (MaxSystem.isOsWindows()) {
+
+				localfile = this.getParentPatcher().getPath() + "\\" + filename;
+
+			}
 
 			if (localfile.equals(MaxSystem.locateFile(filename))) {
 				fuzzy = new FuzzySystem(localfile);
