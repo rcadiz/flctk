@@ -88,7 +88,7 @@ public class Fuzzy extends MaxObject {
 				update();
 			}
 			else {
-				error("File " + filename + " must be on the same folder as this patch.");
+				error("File " + filename + " must be on the same folder as this patch." + localfile);
 			}
 		}
 		else {

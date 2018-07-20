@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 138.0, 79.0, 1095.0, 733.0 ],
+		"rect" : [ 174.0, 79.0, 1095.0, 733.0 ],
 		"bgcolor" : [ 0.900537, 0.724439, 0.391741, 1.0 ],
 		"editing_bgcolor" : [ 0.900537, 0.724439, 0.391741, 1.0 ],
 		"bglocked" : 0,
@@ -251,14 +251,14 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-11",
-									"linecount" : 4,
+									"linecount" : 8,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 282.0, 44.0, 50.0, 62.0 ],
 									"style" : "",
-									"text" : "/fuzzyOutputs 0.5 0.5 ??? ???"
+									"text" : "/fuzzyOutputs 0.532547 0.634073 0.220893 0.5"
 								}
 
 							}

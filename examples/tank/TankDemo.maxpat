@@ -46,6 +46,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 610.0, 105.0, 69.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 194.0, 138.5, 69.0, 22.0 ],
 					"style" : "",
 					"text" : "showRules"
 				}
@@ -195,7 +197,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ -9.0, -1.0, 1685.0, 77.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -9.0, -1.0, 1685.0, 77.0 ],
+					"presentation_rect" : [ -15.0, -3.0, 1685.0, 77.0 ],
 					"viewvisibility" : 1
 				}
 
