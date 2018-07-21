@@ -84,7 +84,7 @@ public class Fuzzy extends MaxObject {
 
 			if (MaxSystem.isOsWindows()) {
 
-				localfile = this.getParentPatcher().getPath() + "\\" + filename;
+				localfile = this.getParentPatcher().getPath() + "/" + filename;
 
 			}
 
@@ -95,7 +95,7 @@ public class Fuzzy extends MaxObject {
 				update();
 			}
 			else {
-				error("File " + filename + " must be on the same folder as this patch." + localfile);
+				error("File " + filename + " must be on the same folder as this patch." + localfile + " " +MaxSystem.locateFile(filename));
 			}
 		}
 		else {
