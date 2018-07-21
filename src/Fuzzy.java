@@ -77,7 +77,9 @@ public class Fuzzy extends MaxObject {
 	 */
 	public Fuzzy(String filename) {
 
-		if (MaxSystem.locateFile(filename) != null) {
+		String locateFile = MaxSystem.nameConform(MaxSystem.locateFile(filename),MaxSystem.PATH_STYLE_SLASH,MaxSystem.PATH_TYPE_ABSOLUTE);
+
+		if (locateFile != null) {
 
 
 			String localfile = this.getParentPatcher().getPath() + "/" + filename;
@@ -88,14 +90,14 @@ public class Fuzzy extends MaxObject {
 
 			}
 
-			if (localfile.equals(MaxSystem.locateFile(filename))) {
+			if (localfile.equals(locateFile)) {
 				fuzzy = new FuzzySystem(localfile);
 				fileChooser = new JFileChooser();
 				fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
 				update();
 			}
 			else {
-				error("File " + filename + " must be on the same folder as this patch." + localfile + " " +MaxSystem.locateFile(filename));
+				error("File " + filename + " must be on the same folder as this patch." + localfile + " " + locateFile);
 			}
 		}
 		else {
